@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="Graphique.PageRecherche"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Graphique" xmlns:UcIcons="clr-namespace:Graphique.UcIcons"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+            
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal" 
+            TextOptions.TextRenderingMode="Auto"    
+        
+            FontFamily="{DynamicResource MaterialDesignFont}">
+
+
+    <Grid Margin="5,0,0,0" x:Name="Grille">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+
+        </Grid.RowDefinitions>
+
+        <materialDesign:ColorZone Grid.RowSpan="2" 
+                          
+                          Mode="Light"
+                          Opacity="0.9"    
+                          Padding="5">
+            <DockPanel>
+                <materialDesign:ColorZone
+                        
+                        Mode="Standard"
+                        Padding="5 4 8 4"
+                        CornerRadius="2"
+                        Panel.ZIndex="1"
+                        Margin="100 0 0 0"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                    Width="Auto" />
+                            <ColumnDefinition
+                                    Width="*" />
+                            <ColumnDefinition
+                                    Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Button
+                                Style="{DynamicResource MaterialDesignToolButton}" x:Name="BoutonRechercher" Click="ClickRechercher">
+                            <materialDesign:PackIcon
+                                      Kind="Magnify"
+                                      Opacity=".56" />
+                        </Button>
+                        <TextBox
+                            Grid.Column="1"
+                            Margin="1 0 0 0"
+                            materialDesign:HintAssist.Hint="Rechercher une musique ou un artiste"
+                            materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                            BorderThickness="0"
+                            MinWidth="200"
+                            VerticalAlignment="Center" x:Name="BarreRecherche" Text="" TextChanged="ChangementTexte" ForceCursor="True"/>
+
+                    </Grid>
+                </materialDesign:ColorZone>
+
+
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <TextBlock Text="" x:Name="Test" Grid.Row="3"/>
+
+        <TextBlock Text="Musiques trouvées :" Grid.Row="1" VerticalAlignment="Bottom" x:Name="MusiqueT"/>
+
+        <ListBox  Grid.Row="2" x:Name="musiques" Style="{StaticResource ListePageAccueil}" SelectionChanged="SelChangeMusique">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel  ItemHeight="{Binding ElementName=musiques, Path=ActualHeight}"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <UcIcons:UcMusiqueCarre />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+        <TextBlock Text="Artistes trouvés :" Grid.Row="3" VerticalAlignment="Bottom" x:Name="ArtisteT"/>
+        <ListBox  Grid.Row="4" x:Name="artistes" Style="{StaticResource ListePageAccueil}" SelectionChanged="SelChangeArtiste">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel ItemHeight="{Binding ElementName=artistes, Path=ActualHeight}" x:Name="wrapPanel" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <UcIcons:UcArtisteCarre />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock Text="Albums trouvés :" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Bottom" x:Name="AlbumT"/>
+        <ListBox Grid.Row="6" x:Name="albums" Style="{StaticResource ListePageAccueil}" SelectionChanged="SelChangeAlbum">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel ItemHeight="{Binding ElementName=albums, Path=ActualHeight}" x:Name="wrapPanel" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <UcIcons:UcAlbumCarre />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+
+
+
+
+    </Grid>
+</UserControl>

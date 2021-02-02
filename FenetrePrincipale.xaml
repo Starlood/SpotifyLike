@@ -1,0 +1,85 @@
+﻿<Window x:Class="Graphique.FenetrePrincipale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Graphique"
+        mc:Ignorable="d"
+        Title="Application" Height="480" Width="800" MinHeight="480" MinWidth="800"
+        Background="#EDF2F4"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"         
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns:converter="clr-namespace:Graphique.converters"
+        Closing="Window_Closed">
+    
+    <Window.Resources>
+        <converter:StringToImage x:Key="stringToImage"/>
+    </Window.Resources>
+    <Grid x:Name="grille">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Rectangle Grid.RowSpan="7"  RenderTransformOrigin="0.5,0.5" Margin="0,0,0,0" >
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform X="0"/>
+                        
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{DynamicResource ValidationErrorColor}"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+
+
+
+            <Ellipse Name="photoProfil" Margin="40,20,40,5" Stroke="Black" MaxWidth="180" Height="{Binding ActualWidth, ElementName=photoProfil, Mode=OneWay}" PreviewMouseDown="AccederProfil">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding ImageArtiste, Converter={StaticResource stringToImage}}" Stretch="Fill"></ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+
+
+
+            <TextBlock  Margin="40,2,40,2" Text="{Binding NomArtiste}" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+
+
+            <Button x:Name="accueilButton" Content="Accueil" Grid.Row="2" Height="40" Click="AccueilButton_Click" Style="{StaticResource BoutonMenu}" Margin="30,5,30,5"/>
+
+
+            <Button x:Name="playlistButton" Content="Playlists" Grid.Row="3" Click="PlaylistButton_Click" Style="{StaticResource BoutonMenu}"/>
+
+            <Button x:Name="artisteButton" Content="Artistes" Grid.Row="4" Click="ArtisteButton_Click" Style="{StaticResource BoutonMenu}"/>
+
+            <Button x:Name="musiqueButton" Content="Musiques" Grid.Row="5" Click="MusiqueButton_Click" Style="{StaticResource BoutonMenu}"/>
+
+
+        </Grid>
+
+        <ContentControl Grid.Column="1" x:Name="contentControl">
+
+        </ContentControl>
+
+    </Grid>
+</Window>
