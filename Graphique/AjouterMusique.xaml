@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Graphique.AjouterMusique"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Graphique"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+            TextElement.FontWeight="Regular"
+            TextElement.FontSize="13"
+            TextOptions.TextFormattingMode="Ideal" 
+            TextOptions.TextRenderingMode="Auto"    
+            Background="Transparent"
+            FontFamily="{DynamicResource MaterialDesignFont}"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+            xmlns:pro="clr-namespace:Modele;assembly=Modele">
+
+
+
+
+
+    <UserControl.Resources>
+
+        <ObjectDataProvider MethodName="GetValues"
+                        ObjectType="{x:Type sys:Enum}"
+                        x:Key="TypeMusicaux">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="pro:TypeMusicaux" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <materialDesign:Card Grid.Column="1"  Margin="10,25,10,25">
+            <TextBlock x:Name="TitrePage" Style="{DynamicResource MaterialDesignTitleTextBlock}" Text="Ajouter une musique" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </materialDesign:Card>
+
+
+
+        <StackPanel Width="200"  Grid.Column="1" Grid.Row="1" Grid.RowSpan="3">
+            <TextBlock Text="Titre de la musique:" Margin="5,10,5,0"/>
+            <TextBox  Margin="5,0,5,10" Name="BoxNom"/>
+            <TextBlock Text="Lien youtube de la musique:" Margin="5,10,5,0"/>
+            <TextBox  Margin="5,0,5,10" Name="BoxLien"/>
+            <TextBlock Text="A quel album la musique appartient:" Margin="5,10,5,0"/>
+            <ComboBox Name="ListAlbum" ItemsSource="{Binding ListeAlbums}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding NomAlbum}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+
+
+
+
+
+
+            <Button Content="Confirmer" Click="ClickConfirmer" Margin="0,15"/>
+            <TextBlock Name="TextErreur" FontSize="15" TextWrapping="Wrap"/>
+            <DatePicker x:Name="ChoisirDate"
+                  materialDesign:HintAssist.Hint="Seletionnez une date"
+                  Style="{StaticResource MaterialDesignOutlinedDatePicker}" />
+            
+        </StackPanel>
+        
+        <TextBlock Text="Quels artistes y participent:" Margin="5,0,5,0" TextWrapping="Wrap" Grid.Row="1"/>
+        <ListBox Name="ListArtistes" ItemsSource="{Binding LesArtistes}" ScrollViewer.CanContentScroll="True" Grid.Row="1" Grid.RowSpan="3" Margin="0,40">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding NomArtiste}" Checked="CheckClickArt" Unchecked="UnCheckClickArt" Name="CheckAr" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+
+
+        <StackPanel Grid.Column="2" Grid.Row="1" Grid.RowSpan="3">
+            <TextBlock Text="Choisissez le style:"/>
+            <ListBox Name="myComboBox" SelectedIndex="0" Margin="8" ItemsSource="{Binding Source={StaticResource TypeMusicaux}}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding }" Checked="CheckClickSty" Unchecked="CheckClickSty"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+        </StackPanel>
+
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Graphique.MesMusiques"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Graphique" xmlns:UcIcons="clr-namespace:Graphique.UcIcons"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" Text=" Mes Musiques préférés :" FontSize="30" Margin="10,20,10,0"/>
+
+
+
+
+        <ListBox  Grid.Row="2" x:Name="musiques" Style="{StaticResource ListePageAccueil}" ItemsSource="{Binding}" SelectionChanged="SelChange">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate >
+                    <WrapPanel ItemHeight="{Binding ElementName=musiques, Path=ActualHeight}" x:Name="wrapPanel"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <UcIcons:UcMusiqueCarre />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+       
+    </Grid>
+</UserControl>
