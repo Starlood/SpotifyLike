@@ -1,0 +1,10 @@
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\bin\Debug\netstandard2.0\BiblioImages.deps.json
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\bin\Debug\netstandard2.0\BiblioImages.dll
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\bin\Debug\netstandard2.0\BiblioImages.pdb
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\obj\Debug\netstandard2.0\BiblioImages.csprojAssemblyReference.cache
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\obj\Debug\netstandard2.0\BiblioImages.g.resources
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\obj\Debug\netstandard2.0\BiblioImages.AssemblyInfoInputs.cache
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\obj\Debug\netstandard2.0\BiblioImages.AssemblyInfo.cs
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\obj\Debug\netstandard2.0\BiblioImages.csproj.CoreCompileInputs.cache
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\obj\Debug\netstandard2.0\BiblioImages.dll
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\BiblioImages\obj\Debug\netstandard2.0\BiblioImages.pdb

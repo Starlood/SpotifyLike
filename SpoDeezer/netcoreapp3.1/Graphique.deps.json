@@ -1,0 +1,100 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Graphique/1.0.0": {
+        "dependencies": {
+          "BiblioImages": "1.0.0",
+          "MaterialDesignThemes": "3.1.2",
+          "Modele": "1.0.0"
+        },
+        "runtime": {
+          "Graphique.dll": {}
+        }
+      },
+      "MaterialDesignColors/1.2.5": {
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {
+            "assemblyVersion": "1.2.5.1465",
+            "fileVersion": "1.2.5.1465"
+          }
+        }
+      },
+      "MaterialDesignThemes/3.1.2": {
+        "dependencies": {
+          "MaterialDesignColors": "1.2.5"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "3.1.2.1465",
+            "fileVersion": "3.1.2.1465"
+          }
+        }
+      },
+      "System.Text.Json/4.7.2": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+            "assemblyVersion": "4.0.1.2",
+            "fileVersion": "4.700.20.21406"
+          }
+        }
+      },
+      "BiblioImages/1.0.0": {
+        "runtime": {
+          "BiblioImages.dll": {}
+        }
+      },
+      "Modele/1.0.0": {
+        "dependencies": {
+          "MaterialDesignThemes": "3.1.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "Modele.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Graphique/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MaterialDesignColors/1.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RrgpDKLrU3j++fIeKc3wnYZUbIvgVjVQEttIyCvIV4/UyOnnDvRXGw2FjMJFvHIArRI6gBYS3hcZBP3mjVuOng==",
+      "path": "materialdesigncolors/1.2.5",
+      "hashPath": "materialdesigncolors.1.2.5.nupkg.sha512"
+    },
+    "MaterialDesignThemes/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A0r3ZTwUq9zLdtdLOM02gU9ecCwuDJARS4uA98PTQQn1ngf94vI8zWshieoXK2VUD5V4HauJpJF/WAFfzvdwpg==",
+      "path": "materialdesignthemes/3.1.2",
+      "hashPath": "materialdesignthemes.3.1.2.nupkg.sha512"
+    },
+    "System.Text.Json/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "path": "system.text.json/4.7.2",
+      "hashPath": "system.text.json.4.7.2.nupkg.sha512"
+    },
+    "BiblioImages/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modele/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

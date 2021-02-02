@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon></ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="picture\icons\accueil.png" />
+    <None Remove="picture\icons\album.png" />
+    <None Remove="picture\icons\group.png" />
+    <None Remove="picture\icons\icon 2.png" />
+    <None Remove="picture\icons\icon artist.png" />
+    <None Remove="picture\icons\icon playlist.png" />
+    <None Remove="picture\icons\icon user.png" />
+    <None Remove="picture\icons\icon user2.jpg" />
+    <None Remove="picture\icons\like.png" />
+    <None Remove="picture\icons\loupe.png" />
+    <None Remove="picture\icons\personne.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="picture\icons\accueil.png" />
+    <Resource Include="picture\icons\album.png" />
+    <Resource Include="picture\icons\group.png" />
+    <Resource Include="picture\icons\icon 2.png" />
+    <Resource Include="picture\icons\icon artist.png" />
+    <Resource Include="picture\icons\icon playlist.png" />
+    <Resource Include="picture\icons\icon user.png" />
+    <Resource Include="picture\icons\icon user2.jpg" />
+    <Resource Include="picture\icons\like.png" />
+    <Resource Include="picture\icons\loupe.png" />
+    <Resource Include="picture\icons\personne.png" />
+  </ItemGroup>
+
+</Project>

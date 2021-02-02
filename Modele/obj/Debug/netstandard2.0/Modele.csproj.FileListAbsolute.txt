@@ -1,0 +1,9 @@
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\bin\Debug\netstandard2.0\Modele.deps.json
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\bin\Debug\netstandard2.0\Modele.dll
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\bin\Debug\netstandard2.0\Modele.pdb
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\obj\Debug\netstandard2.0\Modele.csprojAssemblyReference.cache
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\obj\Debug\netstandard2.0\Modele.AssemblyInfoInputs.cache
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\obj\Debug\netstandard2.0\Modele.AssemblyInfo.cs
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\obj\Debug\netstandard2.0\Modele.csproj.CoreCompileInputs.cache
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\obj\Debug\netstandard2.0\Modele.dll
+C:\Users\cyril\Desktop\IUT\Bordel\MusiqueProjet\sources\Modele\obj\Debug\netstandard2.0\Modele.pdb
