@@ -1,0 +1,239 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MaterialDesignColors/1.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {}
+        }
+      },
+      "MaterialDesignThemes/3.1.2": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "[1.2.5, 2.0.0)"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "System.Text.Json/4.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        }
+      },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MaterialDesignThemes": "3.1.2",
+          "Modele": "1.0.0",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Modele/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "MaterialDesignThemes": "3.1.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "bin/placeholder/Modele.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modele.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MaterialDesignColors/1.2.5": {
+      "sha512": "RrgpDKLrU3j++fIeKc3wnYZUbIvgVjVQEttIyCvIV4/UyOnnDvRXGw2FjMJFvHIArRI6gBYS3hcZBP3mjVuOng==",
+      "type": "package",
+      "path": "materialdesigncolors/1.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net45/MaterialDesignColors.dll",
+        "lib/net45/MaterialDesignColors.pdb",
+        "lib/netcoreapp3.1/MaterialDesignColors.dll",
+        "lib/netcoreapp3.1/MaterialDesignColors.pdb",
+        "materialdesigncolors.1.2.5.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/3.1.2": {
+      "sha512": "A0r3ZTwUq9zLdtdLOM02gU9ecCwuDJARS4uA98PTQQn1ngf94vI8zWshieoXK2VUD5V4HauJpJF/WAFfzvdwpg==",
+      "type": "package",
+      "path": "materialdesignthemes/3.1.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net45/MaterialDesignThemes.Wpf.dll",
+        "lib/net45/MaterialDesignThemes.Wpf.pdb",
+        "lib/net45/MaterialDesignThemes.Wpf.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.3.1.2.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "System.Text.Json/4.7.2": {
+      "sha512": "TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "type": "package",
+      "path": "system.text.json/4.7.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.4.7.2.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
+    },
+    "Modele/1.0.0": {
+      "type": "project",
+      "path": "../Modele/Modele.csproj",
+      "msbuildProject": "../Modele/Modele.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Data >= 1.0.0",
+      "MaterialDesignThemes >= 3.1.2",
+      "Modele >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\cyril\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\cyril\\Desktop\\IUT\\Bordel\\MusiqueProjet\\sources\\MaConsole\\MaConsole.csproj",
+      "projectName": "MaConsole",
+      "projectPath": "C:\\Users\\cyril\\Desktop\\IUT\\Bordel\\MusiqueProjet\\sources\\MaConsole\\MaConsole.csproj",
+      "packagesPath": "C:\\Users\\cyril\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cyril\\Desktop\\IUT\\Bordel\\MusiqueProjet\\sources\\MaConsole\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\cyril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\cyril\\Desktop\\IUT\\Bordel\\MusiqueProjet\\sources\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\cyril\\Desktop\\IUT\\Bordel\\MusiqueProjet\\sources\\Data\\Data.csproj"
+            },
+            "C:\\Users\\cyril\\Desktop\\IUT\\Bordel\\MusiqueProjet\\sources\\Modele\\Modele.csproj": {
+              "projectPath": "C:\\Users\\cyril\\Desktop\\IUT\\Bordel\\MusiqueProjet\\sources\\Modele\\Modele.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[3.1.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
